@@ -10,7 +10,7 @@ import CenaContato from './src/CenaContato.js'
 
 const AppNavigator = createStackNavigator({
   // home: CenaPrincipal,
-  clientes: CenaClientes,
+  // clientes: CenaClientes,
   contatos: CenaContato
   
 })

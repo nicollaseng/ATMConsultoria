@@ -12,7 +12,7 @@ export default class CenaContatos extends Component {
         const botao_back = require('../img/btn_voltar.png')
         const mensagem = require('../img/detalhe_contato.png')
         return(
-            <View>
+            <View style={{backgroundColor: 'white', flex:1}}>
                 <BarraNavegacao styleBarraNavegacao={barraNavegacaoStyle} />
                 <TouchableOpacity style={botaoVoltar} 
                                     onPress={() => this.props.navigation.goBack() }>
