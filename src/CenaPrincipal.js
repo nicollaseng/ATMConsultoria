@@ -36,10 +36,10 @@ export default class CenaPrincipal extends Component {
         </TouchableOpacity>
       </View>
       <View style={itemsStyleOne}>
-        <TouchableOpacity >
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('empresa')}>
           <Image source={menu_empresa}/>
         </TouchableOpacity >
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('servico')}>
           <Image source={menu_servico} />
         </TouchableOpacity>
       </View>

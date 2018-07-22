@@ -7,11 +7,15 @@ import {createStackNavigator} from 'react-navigation'
 import CenaPrincipal from './src/CenaPrincipal.js';
 import CenaClientes from './src/CenaClientes.js';
 import CenaContato from './src/CenaContato.js'
+import CenaEmpresa from './src/CenaEmpresa.js'
+import CenaServico from './src/CenaServico.js'
 
 const AppNavigator = createStackNavigator({
-  // home: CenaPrincipal,
-  // clientes: CenaClientes,
-  contatos: CenaContato
+  home: CenaPrincipal,
+  clientes: CenaClientes,
+  contatos: CenaContato,
+  empresa: CenaEmpresa,
+  servico: CenaServico
   
 })
 
