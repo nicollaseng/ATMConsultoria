@@ -18,7 +18,7 @@ export default class CenaPrincipal extends Component {
     return (
       <View>
       <StatusBar hidden />
-      <BarraNavegacao />
+      <BarraNavegacao style={barraNavegacaoStyle}/>
       <View style={logoStyle}>
         <Image source={logo} />
       </View>
@@ -55,7 +55,11 @@ const style = StyleSheet.create({
         alignItems: 'center',
         flex: 0.5,
         marginTop: 150
+    },
+    barraNavegacaoStyle: {
+        backgroundColor: '#f0f0f5',
+        padding: 30
     }
 })
 
-const {logoStyle, itemsStyleOne, itemsStyleTwo}  = style
+const {logoStyle, itemsStyleOne, itemsStyleTwo ,barraNavegacaoStyle}  = style

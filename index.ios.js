@@ -6,13 +6,13 @@ import {
   View,
   StatusBar
 } from 'react-native';
-import CenaPrincipal from './src/CenaPrincipal.js';
+import CenaClientes from './src/CenaClientes.js';
 
 export default class app5 extends Component {
   render() {
     return (
       <View>
-        <CenaPrincipal />
+        <CenaClientes />
       </View>
     );
   }

@@ -8,7 +8,7 @@ import {
 export default class BarraNavegacao extends Component{
     render(){
         return(
-            <View style={barraNavegacaoStyle}>
+            <View style={this.props.styleBarraNavegacao}>
                 <Text style={textoStyle}>ATM - Consultoria</Text>
             </View>
         )
@@ -16,10 +16,6 @@ export default class BarraNavegacao extends Component{
 }
 
 const style = StyleSheet.create({
-    barraNavegacaoStyle: {
-        backgroundColor: '#f0f0f5',
-        padding: 30
-    },
     textoStyle: {
         fontSize: 30,
         textAlign: 'center',
