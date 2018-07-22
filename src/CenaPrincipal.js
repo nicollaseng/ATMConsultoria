@@ -19,12 +19,43 @@ export default class CenaPrincipal extends Component {
       <View>
       <StatusBar hidden />
       <BarraNavegacao />
-      <Image source={logo} />
-      <Image source={menu_cliente} />
-      <Image source={menu_contato} />
-      <Image source={menu_empresa} />
-      <Image source={menu_servico} />
+      <View style={logoStyle}>
+        <Image source={logo} />
+      </View>
+      <View style={itemsStyleOne}>
+        <Image source={menu_cliente} />
+        <Image source={menu_contato} />
+      </View>
+      <View style={itemsStyleTwo}>
+        <Image source={menu_empresa} />
+        <Image source={menu_servico} />
+      </View>
       </View>
     );
   }
 }
+
+const style = StyleSheet.create({
+    logoStyle: {
+        alignItems: 'center',
+        flexDirection: 'column',
+        flex: 0.5,
+        marginVertical: 50
+    },
+    itemsStyleOne: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        flex: 0.5,
+        marginTop: 200
+    },
+    itemsStyleTwo: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        flex: 0.5,
+        marginTop: 150
+    }
+})
+
+const {logoStyle, itemsStyleOne, itemsStyleTwo}  = style

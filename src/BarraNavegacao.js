@@ -17,7 +17,7 @@ export default class BarraNavegacao extends Component{
 
 const style = StyleSheet.create({
     barraNavegacaoStyle: {
-        backgroundColor: 'grey',
+        backgroundColor: '#f0f0f5',
         padding: 30
     },
     textoStyle: {
