@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import BarraNavegacao from './src/BarraNavegacao.js'
 import {
   AppRegistry,
   StyleSheet,
@@ -7,13 +6,13 @@ import {
   View,
   StatusBar
 } from 'react-native';
+import CenaPrincipal from './src/CenaPrincipal.js';
 
 export default class app5 extends Component {
   render() {
     return (
       <View>
-      <StatusBar hidden />
-      <BarraNavegacao />
+        <CenaPrincipal />
       </View>
     );
   }
