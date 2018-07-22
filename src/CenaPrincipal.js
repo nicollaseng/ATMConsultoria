@@ -4,7 +4,8 @@ import {
   StyleSheet,
   View,
   StatusBar,
-  Image
+  Image,
+  TouchableOpacity
 } from 'react-native';
 
 const logo = require('../img/logo.png')
@@ -14,22 +15,30 @@ const menu_empresa = require('../img/menu_empresa.png')
 const menu_servico = require('../img/menu_servico.png')
 
 export default class CenaPrincipal extends Component {
+  static navigationOptions = ({ navigation }) => {
+    return {
+       header: null
+    }
+ }
   render() {
     return (
       <View>
       <StatusBar hidden />
-      <BarraNavegacao style={barraNavegacaoStyle}/>
       <View style={logoStyle}>
         <Image source={logo} />
       </View>
       <View style={itemsStyleOne}>
-        <Image source={menu_cliente} />
-        <Image source={menu_contato} />
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('clientes')}>
+          <Image source={menu_cliente}/>
+        </TouchableOpacity >
+        <TouchableOpacity>
+          <Image source={menu_contato} />
+        </TouchableOpacity>
       </View>
-      <View style={itemsStyleTwo}>
+      {/* <View style={itemsStyleTwo}>
         <Image source={menu_empresa} />
         <Image source={menu_servico} />
-      </View>
+      </View> */}
       </View>
     );
   }
@@ -40,21 +49,18 @@ const style = StyleSheet.create({
         alignItems: 'center',
         flexDirection: 'column',
         flex: 0.5,
-        marginVertical: 50
+        marginVertical: 80
     },
     itemsStyleOne: {
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-        alignItems: 'center',
-        flex: 0.5,
-        marginTop: 200
+      flexDirection: 'row',
+      justifyContent: 'space-around',
+      marginTop: 100
     },
     itemsStyleTwo: {
-        flexDirection: 'row',
-        justifyContent: 'space-around',
-        alignItems: 'center',
-        flex: 0.5,
-        marginTop: 150
+      flexDirection: 'row',
+      justifyContent: 'space-around',
+      alignItems: 'center',
+      flex: 1
     },
     barraNavegacaoStyle: {
         backgroundColor: '#f0f0f5',

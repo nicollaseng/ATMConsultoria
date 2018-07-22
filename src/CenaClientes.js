@@ -14,6 +14,11 @@ const detalhe_cliente = require('../img/detalhe_cliente.png')
 const btn_voltar = require('../img/btn_voltar.png')
 
 export default class CenaClientes extends Component {
+  static navigationOptions = ({ navigation }) => {
+    return {
+       header: null
+    }
+ }
   render() {
     return (
       <View>

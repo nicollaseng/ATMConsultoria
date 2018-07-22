@@ -6,6 +6,11 @@ import {
 } from 'react-native';
 
 export default class BarraNavegacao extends Component{
+    static navigationOptions = ({ navigation }) => {
+        return {
+           header: null
+        }
+     }
     render(){
         return(
             <View style={this.props.styleBarraNavegacao}>
