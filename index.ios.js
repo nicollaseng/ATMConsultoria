@@ -6,10 +6,12 @@ import {
 import {createStackNavigator} from 'react-navigation'
 import CenaPrincipal from './src/CenaPrincipal.js';
 import CenaClientes from './src/CenaClientes.js';
+import CenaContato from './src/CenaContato.js'
 
 const AppNavigator = createStackNavigator({
   home: CenaPrincipal,
   clientes: CenaClientes,
+  contatos: CenaContato
   
 })
 
@@ -17,7 +19,7 @@ export default class app5 extends Component {
   
   render() {
     return (
-        <AppNavigator/>
+        <AppNavigator />
     );
   }
 }

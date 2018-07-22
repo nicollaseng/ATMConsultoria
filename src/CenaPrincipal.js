@@ -22,7 +22,7 @@ export default class CenaPrincipal extends Component {
  }
   render() {
     return (
-      <View>
+      <View style={{backgroundColor: 'white', flex:1}}>
       <StatusBar hidden />
       <View style={logoStyle}>
         <Image source={logo} />
@@ -31,12 +31,12 @@ export default class CenaPrincipal extends Component {
         <TouchableOpacity onPress={() => this.props.navigation.navigate('clientes')}>
           <Image source={menu_cliente}/>
         </TouchableOpacity >
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('contatos')}>
           <Image source={menu_contato} />
         </TouchableOpacity>
       </View>
       <View style={itemsStyleOne}>
-        <TouchableOpacity onPress={() => this.props.navigation.navigate('clientes')}>
+        <TouchableOpacity >
           <Image source={menu_empresa}/>
         </TouchableOpacity >
         <TouchableOpacity>
@@ -52,10 +52,8 @@ export default class CenaPrincipal extends Component {
 const style = StyleSheet.create({
     logoStyle: {
         alignItems: 'center',
-        flexDirection: 'column',
-        flex: 0.5,
         marginTop: 100,
-        marginBottom: 50
+        marginBottom: 0
     },
     itemsStyleOne: {
       flexDirection: 'row',
