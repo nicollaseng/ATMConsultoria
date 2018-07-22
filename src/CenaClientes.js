@@ -3,9 +3,9 @@ import BarraNavegacao from './BarraNavegacao.js'
 import {
   StyleSheet,
   View,
-  StatusBar,
   Image,
-  Text
+  Text,
+  TouchableOpacity
 } from 'react-native';
 
 const cliente1 = require('../img/cliente1.png')
@@ -23,9 +23,10 @@ export default class CenaClientes extends Component {
     return (
       <View>
         <BarraNavegacao styleBarraNavegacao={barraNavegacaoStyle}/>
-        <View style={botaoVoltar}>
+        <TouchableOpacity style={botaoVoltar} 
+                          onPress={() => this.props.navigation.goBack()}> 
           <Image source={btn_voltar}/>
-        </View>
+        </TouchableOpacity>
         <View style={logoCliente}>
           <Image source={detalhe_cliente} />
           <Text style={textoCliente}>Clientes</Text>
@@ -45,7 +46,7 @@ const style = StyleSheet.create({
     padding: 30
 },
   logoCliente: {
-    marginTop: 45,
+    marginTop: 60,
     marginLeft: -100,
     flexDirection: 'row',
     justifyContent: 'space-around',

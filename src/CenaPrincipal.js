@@ -35,10 +35,15 @@ export default class CenaPrincipal extends Component {
           <Image source={menu_contato} />
         </TouchableOpacity>
       </View>
-      {/* <View style={itemsStyleTwo}>
-        <Image source={menu_empresa} />
-        <Image source={menu_servico} />
-      </View> */}
+      <View style={itemsStyleOne}>
+        <TouchableOpacity onPress={() => this.props.navigation.navigate('clientes')}>
+          <Image source={menu_empresa}/>
+        </TouchableOpacity >
+        <TouchableOpacity>
+          <Image source={menu_servico} />
+        </TouchableOpacity>
+      </View>
+      
       </View>
     );
   }
@@ -49,23 +54,14 @@ const style = StyleSheet.create({
         alignItems: 'center',
         flexDirection: 'column',
         flex: 0.5,
-        marginVertical: 80
+        marginTop: 100,
+        marginBottom: 50
     },
     itemsStyleOne: {
       flexDirection: 'row',
       justifyContent: 'space-around',
       marginTop: 100
-    },
-    itemsStyleTwo: {
-      flexDirection: 'row',
-      justifyContent: 'space-around',
-      alignItems: 'center',
-      flex: 1
-    },
-    barraNavegacaoStyle: {
-        backgroundColor: '#f0f0f5',
-        padding: 30
     }
 })
 
-const {logoStyle, itemsStyleOne, itemsStyleTwo ,barraNavegacaoStyle}  = style
+const {logoStyle, itemsStyleOne}  = style

@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
 import {
   AppRegistry,
-  StyleSheet,
-  Text,
-  View,
-  StatusBar
+  StyleSheet
 } from 'react-native';
 import {createStackNavigator} from 'react-navigation'
-import BarraNavegacao from './src/BarraNavegacao.js'
 import CenaPrincipal from './src/CenaPrincipal.js';
 import CenaClientes from './src/CenaClientes.js';
 
@@ -21,9 +17,7 @@ export default class app5 extends Component {
   
   render() {
     return (
-      <View>
-        <AppNavigator />
-      </View>
+        <AppNavigator/>
     );
   }
 }
