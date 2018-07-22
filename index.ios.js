@@ -4,13 +4,17 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  StatusBar
 } from 'react-native';
 
 export default class app5 extends Component {
   render() {
     return (
+      <View>
+      <StatusBar hidden />
       <BarraNavegacao />
+      </View>
     );
   }
 }
