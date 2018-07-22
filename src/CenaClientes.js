@@ -21,7 +21,7 @@ export default class CenaClientes extends Component {
  }
   render() {
     return (
-      <View>
+      <View style={{backgroundColor: 'white', flex: 1}}>
         <BarraNavegacao styleBarraNavegacao={barraNavegacaoStyle}/>
         <TouchableOpacity style={botaoVoltar} 
                           onPress={() => this.props.navigation.goBack()}> 
@@ -68,10 +68,8 @@ const style = StyleSheet.create({
     marginTop: 5
   },
   botaoVoltar: {
-    justifyContent: 'flex-end',
-    flex: 1,
     marginLeft: 10,
-    marginTop: -30
+    marginTop: -65
   }
 })
 
